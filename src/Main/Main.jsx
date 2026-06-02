@@ -40,20 +40,20 @@ export default function Main() {
     let[hours,minutes]=time.split(':').map(Number)
     const perd= hours >= 12 ? 'PM' : 'AM';
     hours=hours % 12 || 12;
-    return`${hours}:${minutes < 10?'0' + minutes :minutes} ${perd}`
+    return `${hours}:${minutes < 10 ? "0" + minutes : minutes} ${perd}`
 
   }
   return (
     <section className="min-h-screen flex items-center justify-center px-3">
       <div className="container mx-auto px-4">
-        <div className="top-sec flex justify-between items-center gap-4">
+        <div className="top-sec flex justify-around items-center gap-3">
           <div className="city w-1/2">
-            <h3 className="text-[18px] sm:text-[20px] text-white">المدينه</h3>
+            <h3 className="text-[16px] sm:text-[18px] text-white">المدينه</h3>
             <select
               name=""
               id=""
               onChange={(e) => setCity(e.target.value)}
-              className="rounded-[5px] outline-none bg-[#a54f3a] text-[18px] sm:text-[20px] text-white w-full sm:w-auto"
+              className="rounded-[5px] outline-none bg-[#a54f3a] text-[16px] sm:text-[18px]  text-white w-full sm:w-auto"
             >
               {cities.map((city) => {
                 return (
@@ -66,19 +66,22 @@ export default function Main() {
           </div>
 
           <div className="date w-1/2 text-left">
-            <h3 className="text-[18px] sm:text-[20px] text-white">التاريخ</h3>
-            <h4 className="text-[18px] sm:text-[20px] text-white">
+            <h3 className="text-[16px] sm:text-[18px] text-white">التاريخ</h3>
+            <h4 className="text-[16px] sm:text-[18px] text-white ">
               {dateTimes}
             </h4>
           </div>
         </div>
 
-        <div className="mt-6 flex flex-col gap-3">
+        <div className="mt-6 flex flex-col gap-4">
+        <Prayer name="الامساك" time={ formateTimes(prayerTimes.Imsak)} />
           <Prayer name="الفجر" time={ formateTimes(prayerTimes.Fajr)} />
+          <Prayer name="الشروق" time={ formateTimes(prayerTimes.Sunrise)} />
           <Prayer name="الظهر" time={ formateTimes(prayerTimes.Dhuhr)} />
           <Prayer name="العصر" time={ formateTimes(prayerTimes.Asr)} />
           <Prayer name="المغرب" time={ formateTimes(prayerTimes.Maghrib)} />
           <Prayer name="العشاء" time={ formateTimes(prayerTimes.Isha)} />
+          <Prayer name="منتصف الليل " time={ formateTimes(prayerTimes.Midnight)} />
         </div>
       </div>
     </section>

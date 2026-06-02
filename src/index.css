@@ -4,9 +4,11 @@
 @import "tailwindcss";
 :root{
   --main-border:#d7d7d74e;
-  --bg-color:#c0583e75;
+  --bg-color:#a54f3a;
 }
-
+html, body {
+  overflow-x: hidden;
+}
 html{
   direction: rtl;
 }
@@ -19,8 +21,13 @@ html{
 }
 .prayer{
   background-color: var(--bg-color);
-  margin-bottom: 25px;
-  padding: 5px 25px;
+  margin-bottom: 15px;
+  padding: 10px 15px;
   border-radius: 5px;
   border: 1px solid var(--main-border);
+  font-size: 16px;
+ 
+}
+.prayer .time-prayer{
+  direction: ltr;
 }

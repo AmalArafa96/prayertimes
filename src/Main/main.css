@@ -3,11 +3,14 @@ section{
     background-image: url(../assets/background.jpg);
     background-size:cover ;
     background-position: center;
-    background-repeat: no-repeat;  
+    background-repeat: no-repeat; 
+    min-height: 100vh;
+    height: auto; 
 }
 section .container{
     width: 80%;
     min-width: 280px;
+    
 background-color: #332a224e;
 padding: 30px 25px;
 backdrop-filter:blur(3px);
@@ -21,10 +24,13 @@ section .top-sec {
     border-bottom: 1px solid var(--main-border);
 }
 section .top-sec select{
-width: 120px;
+/* width: auto; */
 padding: 2px 10px;
-margin-top: 10px;
+margin-top: 7px;
 }
 section .top-sec .date{
-    width: 120px;
+    /* width: auto;   */
+    }
+    section .top-sec .date h4{
+        margin-top: 7px;   
     }
