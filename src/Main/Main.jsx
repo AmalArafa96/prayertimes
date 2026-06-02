@@ -44,8 +44,8 @@ export default function Main() {
 
   }
   return (
-    <section className="min-h-screen flex items-center justify-center px-3">
-      <div className="container mx-auto px-4">
+    <section className="min-h-screen flex items-center justify-center ">
+      <div className="container mx-auto ">
         <div className="top-sec flex justify-around items-center gap-3">
           <div className="city w-1/2">
             <h3 className="text-[16px] sm:text-[18px] text-white">المدينه</h3>
