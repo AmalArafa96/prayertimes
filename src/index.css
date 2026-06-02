@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
+
+@import "tailwindcss";
+:root{
+  --main-border:#d7d7d74e;
+  --bg-color:#c0583e75;
+}
+
+html{
+  direction: rtl;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+}
+.prayer{
+  background-color: var(--bg-color);
+  margin-bottom: 25px;
+  padding: 5px 25px;
+  border-radius: 5px;
+  border: 1px solid var(--main-border);
+}
