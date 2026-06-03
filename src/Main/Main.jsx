@@ -43,7 +43,9 @@ export default function Main() {
     img.src = bgImage;
   
     img.onload = () => {
-      setLoading(false);
+      setTimeout(() => {
+        setLoading(false);
+      }, 3000);
     };
   }, []);
   
