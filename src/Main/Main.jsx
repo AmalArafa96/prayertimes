@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Prayer from "../Prayer/Prayer";
 import Spinner from "../Prayer/Spinner/Spinner";
 import bgImage from "../assets/background.jpg";
+
 import "./main.css";
 
 export default function Main() {
@@ -29,15 +30,22 @@ export default function Main() {
         setDateTimes(data_prayer.data.date.gregorian.date);
         console.log("data time is", data_prayer.data.timings);
         console.log("date is", data_prayer.data.date.gregorian.date);
-        setTimeout(() => {
-          setLoading(false);
-        }, 2400);
+        
       } catch (error) {
         console.log(error);
       }
     };
     fetchPrayerTimes();
   }, [city]);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = bgImage;
+  
+    img.onload = () => {
+      setLoading(false);
+    };
+  }, []);
   
 
   function formateTimes(time){
